@@ -24,7 +24,7 @@ while True:
 # 将路由表复制到剪贴板
     
 
-route=os.popen('route print')
+route=os.popen('route print').read()
 os.system('exit')
 
 
