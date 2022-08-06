@@ -1,6 +1,5 @@
 #！/usr/bin/env python
 # -*- coding:utf-8 -*-
-import pyperclip
 import sys
 import os
 import math
@@ -21,7 +20,6 @@ while True:
         sys.exit()
     else:
         print('unexpexted input! try again')
-# 将路由表复制到剪贴板
     
 
 route=os.popen('route print').read()
