@@ -139,7 +139,7 @@ while True:
         en=game_name.replace(' ','-').title
         ch=game_name_cn.replace(' ','-').title
         
-        title='#'+en+','+ch+',0,0,1,0,1,0,By-Auto-generator'+'\n'
+        title='#'+str(en)+','+str(ch)+',0,0,1,0,1,0,By-Auto-generator'+'\n'
         
         file_name=game_name+section+'.rules'
         
