@@ -136,12 +136,12 @@ while True:
         print('游戏中文名:')
         game_name_cn=input('')
         
-        en=game_name.replace(' ','-').title
-        ch=game_name_cn.replace(' ','-').title
+        en=game_name.replace(' ','-')
+        ch=game_name_cn.replace(' ','-')
         
         title='#'+str(en)+','+str(ch)+',0,0,1,0,1,0,By-Auto-generator'+'\n'
         
-        file_name=game_name+section+'.rules'
+        file_name=game_name+'-'+section+'.rules'
         
         file_path = os.path.join(application_path,file_name)
         file=open(file_path,'w')
