@@ -5,7 +5,7 @@ import sys
 import os
 import math
 
-cmd=['echo off | clip','route print |clip','exit']
+cmd=['route print','exit']
 url="https://ssrtool.us/tool/routeToRules"
 if getattr(sys, 'frozen', False):
     application_path = os.path.dirname(sys.executable)
@@ -22,10 +22,11 @@ while True:
     else:
         print('unexpexted input! try again')
 # 将路由表复制到剪贴板
-for f in cmd:
-    os.system(f)
-route=pyperclip.paste()
-# print(route)
+    
+
+route=os.popen('route print')
+os.system('exit')
+
 
 #0,127,192,10,ip>=224,172.16~31,169.254不代理
 forbid_ip=['0','127','192','10']
