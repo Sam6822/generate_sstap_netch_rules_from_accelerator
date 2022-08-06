@@ -1,5 +1,6 @@
 #！/usr/bin/env python
 # -*- coding:utf-8 -*-
+import pyperclip
 import sys
 import os
 import math
@@ -76,7 +77,7 @@ def get_ip_from_route(s=''):
         if count==0:
             cidr=32
             output=output+ip+'/'+str(cidr)+'\n'
-        elif ips[3]==ips[2]==ips[1]:
+        elif ips[3]==ips[2] and ips[2]==ips[1]:
             cidr=24
             output=output+ips[3]+'.'+ips[2]+'.'+ips[1]+'.0'+'/'+str(cidr)+'\n'
         else:
